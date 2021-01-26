@@ -5,7 +5,7 @@ SCHEME ?= $(TARGET)-$(PLATFORM)
 TARGET ?= Kickstarter-Framework
 PLATFORM ?= iOS
 RELEASE ?= itunes
-IOS_VERSION ?= 14.2
+IOS_VERSION ?= 14.3
 IPHONE_NAME ?= iPhone 8
 BRANCH ?= master
 DIST_BRANCH = $(RELEASE)-dist
@@ -42,7 +42,7 @@ dependencies: carthage-bootstrap configs secrets
 bootstrap: hooks dependencies
 
 carthage-bootstrap:
-	bin/carthage.sh || exit 1
+	bin/carthage.sh bootstrap --cache-builds --platform iOS || exit 1
 
 configs = $(basename $(wildcard Kickstarter-iOS/Configs/*.example))
 $(configs):
