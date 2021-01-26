@@ -27,6 +27,6 @@ export XCODE_XCCONFIG_FILE="$xcconfig"
 #elif ! cmp -s Cartfile.resolved Carthage/Cartfile.resolved; then
 brew upgrade carthage
 echo "Resolving dependencies"
-carthage bootstrap --platform iOS --no-use-binaries
+carthage bootstrap --platform iOS 
 cp Cartfile.resolved Carthage
 #fi
