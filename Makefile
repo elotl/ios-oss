@@ -42,7 +42,7 @@ dependencies: carthage-bootstrap configs secrets
 bootstrap: hooks dependencies
 
 carthage-bootstrap:
-	bin/carthage.sh bootstrap || exit 1
+	bin/carthage.sh update --use-xcframeworks || exit 1
 
 configs = $(basename $(wildcard Kickstarter-iOS/Configs/*.example))
 $(configs):
