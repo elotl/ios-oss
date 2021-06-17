@@ -22,7 +22,7 @@ default_environment: &default_environment
 base_job: &base_job
   macos:
     xcode: *xcode_version
-  resource_class: large
+  resource_class: ioskickstarter-self-hosted/xlarge
   working_directory: ~/kickstarter
 
 test_job: &test_job
